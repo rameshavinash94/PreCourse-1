@@ -47,8 +47,8 @@ class SinglyLinkedList:
                 findVal: The data to search for in the linked list.
             Returns:
                 A tuple containing the previous node and the current node. 
-                If the target_data is found in the head node, it returns (None, head).
-                If the target_data is not found, it returns (None, None).
+                If the findVal is found in the head node, it returns (None, head).
+                If the findVal is not found, it returns (None, None).
         """
         tmpNode = self.head
         prev = None
