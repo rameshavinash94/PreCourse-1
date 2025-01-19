@@ -51,10 +51,7 @@ class SinglyLinkedList:
                 If the target_data is not found, it returns (None, None).
         """
         tmpNode = self.head
-        
-        if tmpNode.data == findVal:
-            return None, tmpNode
-        
+        prev = None
         while tmpNode:
             if tmpNode.data == findVal:
                 return prev, tmpNode
@@ -73,9 +70,9 @@ class SinglyLinkedList:
             return
         prev, curr = self._traverseLinkedList(key)
         if curr:
-            print( f"element {curr.data} found @ {curr}")
+            print( f"element {key} found @ {curr}")
             return curr
-        print('element {curr.data} not found')        
+        print( f'element {key} not found')
         
     def remove(self, key):
         """
@@ -109,5 +106,7 @@ newList.append(30)
 newList.append(15)
 newList.find(30)
 newList.find(90)
+newList.find(10)
 newList.remove(10)
 newList.printLinkedList()
+newList.find(10)
